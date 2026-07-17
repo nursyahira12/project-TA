@@ -242,12 +242,12 @@ body{
 
     <!-- Home -->
     <button class="top-btn" onclick="window.location='{{ route('landing') }}'">
-        <img src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
+        <img loading="lazy" src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
     </button>
 
     <!-- Kembali -->
     <button class="top-btn" onclick="window.location='{{ url('/#belajar') }}'">
-        <img src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
+        <img loading="lazy" src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
     </button>
 
     </div>
@@ -337,7 +337,7 @@ body{
                     </div>
 
                     <button class="btn btn-main {{ $buttonColors[$index % 4] }}">
-                        <img src="{{ asset('assets/landing/images/icon/sun.png') }}"
+                        <img loading="lazy" src="{{ asset('assets/landing/images/icon/sun.png') }}"
                              alt="roket">
                     </button>
 

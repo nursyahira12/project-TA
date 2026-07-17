@@ -17,7 +17,7 @@
                                 <div id="rabbit-animation"></div>
 
                                 <button onclick="playWelcomeAudio()" class="rabbit-sound-btn">
-                                    <img src="{{ asset('assets/landing/images/icon/play.png') }}">
+                                    <img loading="lazy" src="{{ asset('assets/landing/images/icon/play.png') }}">
                                 </button>
 
                                 <audio id="welcomeAudio">

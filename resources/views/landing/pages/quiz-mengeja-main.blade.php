@@ -410,7 +410,7 @@ opacity:1;
 
         <div class="soal-box">
 
-            <img src="{{ asset($quiz->gambar_soal) }}"
+            <img loading="lazy" src="{{ asset($quiz->gambar_soal) }}"
                 class="gambar-soal">
 
             <div class="audio-wrapper">
@@ -423,7 +423,7 @@ opacity:1;
                     onclick="document.getElementById('audioSoal').play()"
                     class="audio-btn">
 
-                    <img src="{{ asset('assets/landing/images/icon/sound.png') }}">
+                    <img loading="lazy" src="{{ asset('assets/landing/images/icon/sound.png') }}">
 
                 </button>
 
@@ -445,7 +445,7 @@ opacity:1;
 
                     @if($quiz->gambar_opsi_a)
                         <div class="opsi-img-wrap">
-                            <img src="{{ asset($quiz->gambar_opsi_a) }}" class="opsi-img">
+<img loading="lazy" src="{{ asset($quiz->gambar_opsi_a) }}" class="opsi-img">
                         </div>
                     @endif
 
@@ -468,7 +468,7 @@ opacity:1;
                         @if($quiz->gambar_opsi_b)
 
                             <div class="opsi-img-wrap">
-                                <img src="{{ asset($quiz->gambar_opsi_b) }}" class="opsi-img">
+<img loading="lazy" src="{{ asset($quiz->gambar_opsi_b) }}" class="opsi-img">
                             </div>
 
                         @endif
@@ -492,7 +492,7 @@ opacity:1;
                         @if($quiz->gambar_opsi_c)
 
                             <div class="opsi-img-wrap">
-                                <img src="{{ asset($quiz->gambar_opsi_c) }}" class="opsi-img">
+<img loading="lazy" src="{{ asset($quiz->gambar_opsi_c) }}" class="opsi-img">
                             </div>
 
                         @endif

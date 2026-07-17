@@ -137,7 +137,7 @@
 
                         <br>
 
-                        <img src="{{ asset($materi->gambar) }}"
+                        <img loading="lazy" src="{{ asset($materi->gambar) }}"
                              class="preview-img">
 
                     </div>

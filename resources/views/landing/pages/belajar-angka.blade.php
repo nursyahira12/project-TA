@@ -199,12 +199,12 @@
 
             <!-- Home -->
             <button class="top-btn" onclick="window.location='{{ route('landing') }}'">
-                <img src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
+                <img loading="lazy" src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
             </button>
 
             <!-- Kembali -->
             <button class="top-btn" onclick="window.location='{{ url('/#belajar') }}'">
-                <img src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
+                <img loading="lazy" src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
             </button>
 
         </div>
@@ -222,7 +222,7 @@
                     <div class="box-feature"
                          onclick="document.getElementById('audio{{ $item->id }}').play()">
 
-                        <img src="{{ asset($item->gambar) }}" alt="Image">
+                        <img loading="lazy" src="{{ asset($item->gambar) }}" alt="Image">
 
                     </div>
 

@@ -135,7 +135,7 @@
                         </label>
 
                         <div class="mt-2">
-                            <img src="{{ asset($materi->gambar) }}"
+                            <img loading="lazy" src="{{ asset($materi->gambar) }}"
                                  class="preview-img"
                                  alt="Gambar Huruf">
                         </div>
