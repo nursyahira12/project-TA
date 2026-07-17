@@ -132,7 +132,7 @@
     <div class="login-wrapper">
         <div class="login-card">
             <div class="login-logo">
-                <img src="{{ asset('assets/landing/images/Favicon.png') }}" alt="Azifa">
+                <img loading="lazy" src="{{ asset('assets/landing/images/Favicon.png') }}" alt="Azifa">
             </div>
             <h1 class="login-title">Selamat Datang</h1>
             <p class="login-subtitle">Masuk ke akun guru Anda</p>

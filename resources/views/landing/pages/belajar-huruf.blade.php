@@ -253,11 +253,11 @@
 
     <!-- Home -->
     <button class="top-btn" onclick="window.location='{{ route('landing') }}'">
-        <img src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
+        <img loading="lazy" src="{{ asset('assets/landing/images/icon/home.png') }}" alt="Home">
     </button>
 
     <button class="top-btn" onclick="window.location='{{ url('/#belajar') }}'">
-        <img src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
+        <img loading="lazy" src="{{ asset('assets/landing/images/icon/back.png') }}" alt="Back">
     </button>
 
     </div>
@@ -265,11 +265,11 @@
     <div class="mode-button">
 
         <button onclick="showSlideMode()">
-            <img src="{{ asset('assets/landing/images/icon/btn-az.png') }}" alt="A-Z">
+            <img loading="lazy" src="{{ asset('assets/landing/images/icon/btn-az.png') }}" alt="A-Z">
         </button>
 
         <button onclick="showAllMode()">
-            <img src="{{ asset('assets/landing/images/icon/btn-all.png') }}" alt="All">
+            <img loading="lazy" src="{{ asset('assets/landing/images/icon/btn-all.png') }}" alt="All">
         </button>
 
     </div>
@@ -282,7 +282,7 @@
         <div class="single-card slide-item {{ $index != 0 ? 'hidden' : '' }} pastel-{{ ($index % 8) + 1 }}">
 
             <div class="image-wrapper">
-                <img src="{{ asset($item->gambar) }}">
+                <img loading="lazy" src="{{ asset($item->gambar) }}">
             </div>
 
             <div class="right-content">
@@ -292,7 +292,7 @@
                 </div>
 
                 <button class="audio-btn" onclick="playAudio({{ $item->id }})">
-                    <img src="{{ asset('assets/landing/images/icon/sound.png') }}" alt="sound">
+                    <img loading="lazy" src="{{ asset('assets/landing/images/icon/sound.png') }}" alt="sound">
                 </button>
 
                 <audio id="audio{{ $item->id }}">
@@ -308,11 +308,11 @@
         <div class="navigation">
 
             <button class="nav-btn" onclick="prevSlide()">
-                <img src="{{ asset('assets/landing/images/icon/kiri.png') }}" alt="prev">
+                <img loading="lazy" src="{{ asset('assets/landing/images/icon/kiri.png') }}" alt="prev">
             </button>
 
             <button class="nav-btn" onclick="nextSlide()">
-                <img src="{{ asset('assets/landing/images/icon/kanan.png') }}" alt="next">
+                <img loading="lazy" src="{{ asset('assets/landing/images/icon/kanan.png') }}" alt="next">
             </button>
 
         </div>
@@ -339,7 +339,7 @@
                      onclick="playAudio({{ $item->id }})">
 
                     <div class="alphabet-image">
-                        <img src="{{ asset($item->gambar) }}">
+                        <img loading="lazy" src="{{ asset($item->gambar) }}">
                     </div>
 
                     <h1 class="alphabet-letter">

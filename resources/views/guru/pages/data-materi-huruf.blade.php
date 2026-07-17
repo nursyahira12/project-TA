@@ -118,7 +118,7 @@ audio{
                     </td>
 
                     <td>
-                        <img src="{{ asset($item->gambar) }}"
+                        <img loading="lazy" src="{{ asset($item->gambar) }}"
                              class="img-huruf"
                              alt="{{ $item->huruf }}">
                     </td>

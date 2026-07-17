@@ -7,7 +7,7 @@
                                 <div class="widget-footer">
                                     <div class="widget widget-logo">
                                         <div class="logo-bottom" id="logo-footer">
-                                            <a href="index.html"><img src="{{ asset('assets/landing/images/logo/logoazifa1.png') }}" alt="kinco"></a>
+                                            <a href="index.html"><img loading="lazy" src="{{ asset('assets/landing/images/logo/logoazifa1.png') }}" alt="kinco"></a>
                                         </div>
                                         
                                         <div class="list-contact">

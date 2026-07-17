@@ -182,7 +182,7 @@
 
                                 @if($item->gambar_soal)
 
-                                    <img src="{{ asset($item->gambar_soal) }}"
+                                    <img loading="lazy" src="{{ asset($item->gambar_soal) }}"
                                          class="img-soal">
 
                                 @else

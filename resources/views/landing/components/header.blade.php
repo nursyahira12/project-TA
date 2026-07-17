@@ -5,13 +5,13 @@
                             <div class="top-bar-2 fx">
                                 <div id="site-logo" class="clearfix">
                                     <a href="index.html" class="logo st-2">
-                                        <img  src="{{ asset('assets/landing/images/logo/logoazifa1.png') }}" style="height:170px" alt="Kinco">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/logo/logoazifa1.png') }}" style="height:170px" alt="Kinco">
                                     </a>
                                 </div>
                                 <div class="header-contact fx">
                                 <div class="inner-contact fx" style="display:flex; align-items:center; gap:15px;">
 
-                                    <img src="assets/landing/images/icon/school.png" 
+                                    <img loading="lazy" src="assets/landing/images/icon/school.png"
                                         alt="School Logo"
                                         style="width:65px; height:65px; object-fit:cover;">
 
@@ -24,7 +24,7 @@
 
                             <div class="inner-contact fx" style="display: flex; align-items: center; gap: 12px;">
 
-                                <img src="{{ asset('assets/landing/images/icon/date.png') }}" 
+                                <img loading="lazy" src="{{ asset('assets/landing/images/icon/date.png') }}"
                                     alt="Jam Operasional"
                                     style="width: 65px; height: 65px; object-fit: contain;">
 
@@ -100,13 +100,13 @@
                     
                     <div class="inner-sidebar side-menu__block-inner fl-st-1">
                         <div class="side-menu__top justify-content-end">
-                            <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="{{ asset('assets/images/common/close.png') }}" alt="images"></a>
+                            <a href="#" class="side-menu__toggler side-menu__close-btn"><img loading="lazy" src="{{ asset('assets/images/common/close.png') }}" alt="images"></a>
                         </div>
                         <div class="wrap">
                             <div class="widget widget-quote">
                                 <div class="box-feature">
                                     <div class="inner">
-                                        <img src="{{ asset('assets/landing/images/post/post-quotes2.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/post/post-quotes2.jpg') }}" alt="Image">
                                         <div class="box-icon jus-ali-ct">
                                             <i class="far fa-quote-right"></i>
                                         </div>
@@ -139,28 +139,28 @@
                                 <div class="list-gallery fx">
                                     <div class="box-photo">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget5.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget5.jpg') }}" alt="Image">
                                     </div>
                                     <div class="box-photo active">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget1.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget1.jpg') }}" alt="Image">
                                     </div>
                                     <div class="box-photo">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget6.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget6.jpg') }}" alt="Image">
                                     </div>
 
                                     <div class="box-photo">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget7.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget7.jpg') }}" alt="Image">
                                     </div>
                                     <div class="box-photo">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget3.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget3.jpg') }}" alt="Image">
                                     </div>
                                     <div class="box-photo">
                                         <div class="overlay fx"><i class="fal fa-plus"></i></div>
-                                        <img src="{{ asset('assets/landing/images/thumbnails/widget8.jpg') }}" alt="Image">
+                                        <img loading="lazy" src="{{ asset('assets/landing/images/thumbnails/widget8.jpg') }}" alt="Image">
                                     </div>
                                 </div>
                             </div>

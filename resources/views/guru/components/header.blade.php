@@ -7,7 +7,7 @@
             <div class="topbar-logo-header">
 
                 <div>
-                    <img src="{{ asset('assets/guru/images/logo-itbrp.png') }}"
+                    <img loading="lazy" src="{{ asset('assets/guru/images/logo-itbrp.png') }}"
                         class="logo-icon"
                         alt="logo icon">
                 </div>
@@ -51,7 +51,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
 
-                    <img src="{{ asset('assets/guru/images/user.png') }}"
+                    <img loading="lazy" src="{{ asset('assets/guru/images/user.png') }}"
                         class="user-img"
                         alt="user avatar">
 

@@ -124,7 +124,7 @@ audio{
                     </td>
 
                     <td>
-                        <img src="{{ asset($item->gambar) }}"
+                        <img loading="lazy" src="{{ asset($item->gambar) }}"
                              class="img-materi">
                     </td>
 

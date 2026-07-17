@@ -1,7 +1,7 @@
 <div class="nav-container primary-menu">
     <div class="mobile-topbar-header">
         <div>
-            <img src="{{ asset('assets/guru/images/logo-icon.png') }}" class="logo-icon" alt="logo icon" />
+            <img loading="lazy" src="{{ asset('assets/guru/images/logo-icon.png') }}" class="logo-icon" alt="logo icon" />
         </div>
 
         <div>

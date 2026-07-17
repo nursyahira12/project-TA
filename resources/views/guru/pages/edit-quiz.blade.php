@@ -197,7 +197,7 @@ h5{
 
                             <div class="preview-box">
 
-                                <img src="{{ asset($quiz->gambar_soal) }}"
+                                <img loading="lazy" src="{{ asset($quiz->gambar_soal) }}"
                                      class="preview-img">
 
                             </div>
@@ -254,7 +254,7 @@ h5{
 
                                 <div class="preview-box">
 
-                                    <img src="{{ asset($quiz->$field) }}"
+                                    <img loading="lazy" src="{{ asset($quiz->$field) }}"
                                          class="preview-img">
 
                                 </div>
