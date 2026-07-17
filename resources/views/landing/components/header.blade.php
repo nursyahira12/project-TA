@@ -40,6 +40,10 @@
 
 
 
+                            <a href="{{ route('login') }}" class="btn-login-guru">
+                                <i class="fas fa-sign-in-alt"></i> Login Guru
+                            </a>
+
                             <a href="#" class="menu-bar-right header-menu">
                                 <svg data-name="Hero Area" xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58">
                                     <defs>
@@ -247,6 +251,27 @@
 #site-header .container{
     position: relative;
     z-index: 2;
+}
+
+/* tombol login guru */
+.btn-login-guru{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-login-guru:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124,58,237,0.35);
+    color: #fff;
 }
 
 </style>
