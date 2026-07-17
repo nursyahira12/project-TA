@@ -56,99 +56,9 @@ Route::get('/ayo-mengeja', [QuizController::class, 'landingMengeja'])
 
 /*
 |--------------------------------------------------------------------------
-| DASHBOARD GURU
+| QUIZ (PUBLIC - diakses siswa)
 |--------------------------------------------------------------------------
 */
-
-Route::get('/guru', [DashboardController::class, 'index'])
-    ->name('dashboard.guru');
-
-/*
-|--------------------------------------------------------------------------
-| KELOLA MATERI
-|--------------------------------------------------------------------------
-*/
-
-Route::get('/guru/materi-angka', [MateriAngkaController::class, 'index'])
-    ->name('materi.angka');
-
-Route::post('/guru/materi-angka/store', [MateriAngkaController::class, 'store'])
-    ->name('materi.angka.store');
-
-Route::get('/guru/materi-angka/delete/{id}', [MateriAngkaController::class, 'delete'])
-    ->name('materi.angka.delete');
-
-Route::get('/guru/materi-angka/edit/{id}', [MateriAngkaController::class, 'edit'])
-    ->name('materi.angka.edit');
-
-Route::post('/guru/materi-angka/update/{id}', [MateriAngkaController::class, 'update'])
-    ->name('materi.angka.update');
-
-Route::get('/guru/data-materi-angka',
-    [MateriAngkaController::class, 'data']
-)->name('materi.angka.data');
-
-
-
-Route::get('/guru/materi-huruf', [MateriHurufController::class, 'index'])
-    ->name('materi.huruf');
-
-Route::get('/guru/materi-huruf/data', [MateriHurufController::class, 'data'])
-    ->name('materi.huruf.data');
-
-Route::post('/guru/materi-huruf/store', [MateriHurufController::class, 'store'])
-    ->name('materi.huruf.store');
-
-Route::delete('/guru/materi-huruf/{id}', [MateriHurufController::class, 'delete'])
-    ->name('materi.huruf.delete');
-
-Route::get('/guru/materi-huruf/edit/{id}', [MateriHurufController::class, 'edit'])
-    ->name('materi.huruf.edit');
-
-Route::post('/guru/materi-huruf/update/{id}', [MateriHurufController::class, 'update'])
-    ->name('materi.huruf.update');
-
-
-
-/*
-|--------------------------------------------------------------------------
-| QUIZ
-|--------------------------------------------------------------------------
-*/
-
-// FORM QUIZ MENGEJA
-Route::get('/guru/quiz-mengeja', [QuizController::class, 'quizMengeja'])
-    ->name('quiz.mengeja');
-
-// DATA QUIZ MENGEJA
-Route::get('/guru/data-quiz-mengeja', [QuizController::class, 'dataMengeja'])
-    ->name('quiz.mengeja.data');
-
-// FORM QUIZ BERHITUNG
-Route::get('/guru/quiz-berhitung', [QuizController::class, 'quizBerhitung'])
-    ->name('quiz.berhitung');
-
-// DATA QUIZ BERHITUNG
-Route::get('/guru/data-quiz-berhitung', [QuizController::class, 'dataBerhitung'])
-    ->name('quiz.berhitung.data');
-
-// SIMPAN QUIZ
-Route::post('/guru/quiz/store', [QuizController::class, 'store'])
-    ->name('quiz.store');
-
-// EDIT QUIZ
-Route::get('/guru/quiz/edit/{id}', [QuizController::class, 'edit'])
-    ->name('quiz.edit');
-
-// UPDATE QUIZ
-Route::post('/guru/quiz/update/{id}', [QuizController::class, 'update'])
-    ->name('quiz.update');
-
-// HAPUS QUIZ
-Route::get('/guru/quiz/delete/{id}', [QuizController::class, 'delete'])
-    ->name('quiz.delete');
-
-
 
 Route::get(
     '/quiz-mengeja/{id}/{nomor}',
@@ -168,8 +78,6 @@ Route::get('/quiz-selesai/{id}', function($id){
 
 })->name('quiz.selesai');
 
-
-
 Route::get(
     '/quiz-berhitung/{id}/{nomor}',
     [QuizController::class, 'mulaiQuizBerhitung']
@@ -180,55 +88,108 @@ Route::get(
     [QuizController::class, 'cekJawabanBerhitung']
 )->name('quiz.berhitung.cek');
 
-Route::get('/ayo-mengeja', [QuizController::class, 'landingMengeja'])
-    ->name('ayo.mengeja');
-
-Route::get('/ayo-berhitung', [QuizController::class, 'landingBerhitung'])
-    ->name('ayo.berhitung');
-
 Route::get('/quiz-berhitung-selesai/{id}', [QuizController::class, 'quizBerhitungSelesai'])
     ->name('quiz.berhitung.selesai');
 
-
-
 /*
 |--------------------------------------------------------------------------
-| KELOLA MURID
+| GURU - requires auth
 |--------------------------------------------------------------------------
 */
 
-Route::get('/guru/murid/form', [MuridController::class, 'form'])
-    ->name('murid.form');
+Route::middleware('auth')->group(function () {
 
-Route::get('/guru/murid/data', [MuridController::class, 'data'])
-    ->name('murid.data');
+    Route::get('/guru', [DashboardController::class, 'index'])
+        ->name('dashboard.guru');
 
-Route::post('/guru/murid/store', [MuridController::class, 'store'])
-    ->name('murid.store');
+    Route::get('/guru/materi-angka', [MateriAngkaController::class, 'index'])
+        ->name('materi.angka');
 
-Route::get('/guru/murid/edit/{id}', [MuridController::class, 'edit'])
-    ->name('murid.edit');
+    Route::post('/guru/materi-angka/store', [MateriAngkaController::class, 'store'])
+        ->name('materi.angka.store');
 
-Route::post('/guru/murid/update/{id}', [MuridController::class, 'update'])
-    ->name('murid.update');
+    Route::get('/guru/materi-angka/delete/{id}', [MateriAngkaController::class, 'delete'])
+        ->name('materi.angka.delete');
 
-Route::get('/guru/murid/delete/{id}', [MuridController::class, 'delete'])
-    ->name('murid.delete');
+    Route::get('/guru/materi-angka/edit/{id}', [MateriAngkaController::class, 'edit'])
+        ->name('materi.angka.edit');
 
-/*
-|--------------------------------------------------------------------------
-| LAPORAN BELAJAR
-|--------------------------------------------------------------------------
-*/
+    Route::post('/guru/materi-angka/update/{id}', [MateriAngkaController::class, 'update'])
+        ->name('materi.angka.update');
 
-Route::get('/guru/laporan-nilai',
-    [NilaiQuizController::class, 'index']
-)->name('laporan.nilai');
+    Route::get('/guru/data-materi-angka',
+        [MateriAngkaController::class, 'data']
+    )->name('materi.angka.data');
 
+    Route::get('/guru/materi-huruf', [MateriHurufController::class, 'index'])
+        ->name('materi.huruf');
 
-Route::get('/guru/laporan-nilai/{id}',
-    [NilaiQuizController::class, 'detail']
-)->name('laporan.nilai.detail');
+    Route::get('/guru/materi-huruf/data', [MateriHurufController::class, 'data'])
+        ->name('materi.huruf.data');
+
+    Route::post('/guru/materi-huruf/store', [MateriHurufController::class, 'store'])
+        ->name('materi.huruf.store');
+
+    Route::delete('/guru/materi-huruf/{id}', [MateriHurufController::class, 'delete'])
+        ->name('materi.huruf.delete');
+
+    Route::get('/guru/materi-huruf/edit/{id}', [MateriHurufController::class, 'edit'])
+        ->name('materi.huruf.edit');
+
+    Route::post('/guru/materi-huruf/update/{id}', [MateriHurufController::class, 'update'])
+        ->name('materi.huruf.update');
+
+    Route::get('/guru/quiz-mengeja', [QuizController::class, 'quizMengeja'])
+        ->name('quiz.mengeja');
+
+    Route::get('/guru/data-quiz-mengeja', [QuizController::class, 'dataMengeja'])
+        ->name('quiz.mengeja.data');
+
+    Route::get('/guru/quiz-berhitung', [QuizController::class, 'quizBerhitung'])
+        ->name('quiz.berhitung');
+
+    Route::get('/guru/data-quiz-berhitung', [QuizController::class, 'dataBerhitung'])
+        ->name('quiz.berhitung.data');
+
+    Route::post('/guru/quiz/store', [QuizController::class, 'store'])
+        ->name('quiz.store');
+
+    Route::get('/guru/quiz/edit/{id}', [QuizController::class, 'edit'])
+        ->name('quiz.edit');
+
+    Route::post('/guru/quiz/update/{id}', [QuizController::class, 'update'])
+        ->name('quiz.update');
+
+    Route::get('/guru/quiz/delete/{id}', [QuizController::class, 'delete'])
+        ->name('quiz.delete');
+
+    Route::get('/guru/murid/form', [MuridController::class, 'form'])
+        ->name('murid.form');
+
+    Route::get('/guru/murid/data', [MuridController::class, 'data'])
+        ->name('murid.data');
+
+    Route::post('/guru/murid/store', [MuridController::class, 'store'])
+        ->name('murid.store');
+
+    Route::get('/guru/murid/edit/{id}', [MuridController::class, 'edit'])
+        ->name('murid.edit');
+
+    Route::post('/guru/murid/update/{id}', [MuridController::class, 'update'])
+        ->name('murid.update');
+
+    Route::get('/guru/murid/delete/{id}', [MuridController::class, 'delete'])
+        ->name('murid.delete');
+
+    Route::get('/guru/laporan-nilai',
+        [NilaiQuizController::class, 'index']
+    )->name('laporan.nilai');
+
+    Route::get('/guru/laporan-nilai/{id}',
+        [NilaiQuizController::class, 'detail']
+    )->name('laporan.nilai.detail');
+
+});
 
 /*
 |--------------------------------------------------------------------------

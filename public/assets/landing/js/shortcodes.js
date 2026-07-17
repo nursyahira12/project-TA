@@ -309,11 +309,16 @@
     };
 
     var pageLoad = function () {
-        $( window ).on('load',function() {
-            $('#preload').delay(600).fadeOut('fast', function () {
+        var $preload = $('#preload');
+        var hidePreload = function () {
+            if ($preload.data('hidden')) return;
+            $preload.data('hidden', true);
+            $preload.delay(600).fadeOut('fast', function () {
                 $('body').removeClass('preloading');
             });
-        });
+        };
+        $( window ).on('load', hidePreload);
+        setTimeout(hidePreload, 3000);
     };
 
     var headerMenu = function () {
