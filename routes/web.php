@@ -39,9 +39,8 @@ Route::get('/belajar-angka', function () {
 
 })->name('belajar.angka');
 
-Route::get('/ayo-berhitung', function () {
-    return view('landing.pages.ayo-berhitung');
-})->name('ayo.berhitung');
+Route::get('/ayo-berhitung', [QuizController::class, 'landingBerhitung'])
+    ->name('ayo.berhitung');
 
 Route::get('/belajar-huruf', function () {
 
